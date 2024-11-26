@@ -90,5 +90,24 @@
 				<button onclick="addToCart('Bigtree Heels Womens Formal', 29.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 		</section>
+		<!-- Cart Modal -->
+		<div class="cart-modal" id="cart-modal">
+			<div class="cart-items">
+				<!-- Cart title -->
+				<h2>Your Cart</h2>
+				<!-- List of items in the cart -->
+				<ul id="cart-list">
+					<!-- Cart items will be dynamically added here -->
+				</ul>
+				<!-- Total price display -->
+				<p>Total: $<span id="total-price">0</span></p>
+				<!-- Button to proceed to the checkout page -->
+				<a href="checkout.html" onclick="saveTotalToLocalStorage()">
+					<button>Proceed to Checkout</button>
+				</a>
+				<!-- Button to close the cart modal -->
+				<button onclick="closeCart()">Close</button>
+			</div>
+		</div>
 </body>
 </html>
