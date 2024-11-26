@@ -52,37 +52,62 @@
 				<img src="shoe1.png" alt="Shoe 1"> <!-- Image of the product -->
 				<p>Mens Active</p> <!-- Product category -->
 				<p>$19.99</p> <!-- Product price -->
+				<button onclick="addToCart('Cemtos Mens Active', 19.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 			<!-- Product 2: Women's activewear shoes -->
        		<div class="product" id="product2" data-category="womens-active">
             	<img src="shoe2.png" alt="Shoe 2"> <!-- Image of the product -->
             	<p>Womens Active</p> <!-- Product category -->
             	<p>$14.99</p> <!-- Product price -->
+				<button onclick="addToCart('Fashion F Womens Active', 14.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 	        <!-- Product 3: Men's casual shoes -->
 			<div class="product" id="product3" data-category="mens-casual">
 				<img src="shoe3.png" alt="Shoe 3"> <!-- Image of the product -->
 				<p>Mens Casual</p> <!-- Product category -->
 				<p>$8.99</p> <!-- Product price -->
+				<button onclick="addToCart('Coconut Slippers Mens Casual', 8.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 	        <!-- Product 4: Women's casual shoes -->
 			<div class="product" id="product4" data-category="womens-casual">
 				<img src="shoe4.png" alt="Shoe 4"> <!-- Image of the product -->
 				<p>Womens Casual</p> <!-- Product category -->
 				<p>$22.99</p> <!-- Product price -->
+				<button onclick="addToCart('Maibulun Slippers Womens Casual', 22.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 	        <!-- Product 5: Men's formal shoes -->
 			<div class="product" id="product5" data-category="mens-formal">
 				<img src="shoe5.png" alt="Shoe 5"> <!-- Image of the product -->
 				<p>Mens Formal</p> <!-- Product category -->
 				<p>$28.99</p> <!-- Product price -->
+				<button onclick="addToCart('Leather 255 Mens Formal', 28.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 	        <!-- Product 6: Women's formal shoes -->
 			<div class="product" id="product6" data-category="womens-formal">
 				<img src="shoe6.png" alt="Shoe 6"> <!-- Image of the product -->
 				<p>Womens Formal</p> <!-- Product category -->
 				<p>$29.99</p> <!-- Product price -->
+				<button onclick="addToCart('Bigtree Heels Womens Formal', 29.99)">Add to Cart</button> <!-- Add to Cart button -->
 			</div>
 		</section>
+		<!-- Cart Modal -->
+		<div class="cart-modal" id="cart-modal">
+			<div class="cart-items">
+				<!-- Cart title -->
+				<h2>Your Cart</h2>
+				<!-- List of items in the cart -->
+				<ul id="cart-list">
+					<!-- Cart items will be dynamically added here -->
+				</ul>
+				<!-- Total price display -->
+				<p>Total: $<span id="total-price">0</span></p>
+				<!-- Button to proceed to the checkout page -->
+				<a href="checkout.html" onclick="saveTotalToLocalStorage()">
+					<button>Proceed to Checkout</button>
+				</a>
+				<!-- Button to close the cart modal -->
+				<button onclick="closeCart()">Close</button>
+			</div>
+		</div>
 </body>
 </html>
