@@ -79,3 +79,13 @@ function filterByCategory() {
     });
 }
 document.getElementById('category').addEventListener('change', filterByCategory);
+// Set total price in checkout page
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('checkout-total-price').innerText = localStorage.getItem('totalCost') || '0';
+});
+// Checkout functionality
+function handleCheckout(event) {
+    event.preventDefault();
+    alert('Transaction Successful!');
+    window.location.href = 'index.html';
+}
