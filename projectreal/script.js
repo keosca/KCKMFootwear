@@ -33,9 +33,49 @@ function closeCart() {
 function saveTotalToLocalStorage() {
     localStorage.setItem('totalCost', total);
 }
-// Checkout functionality
-function handleCheckout(event) {
-    event.preventDefault();
-    alert('Transaction Successful!');
-    window.location.href = 'index.html';
+// Login functionality
+const validCredentials = {
+    username: 'admin',
+    password: 'password123'
+};
+
+function handleLogin(event) {
+    event.preventDefault(); // Prevent form submission
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
+
+    if (usernameInput === validCredentials.username && passwordInput === validCredentials.password) {
+        alert('Login successful!');
+        window.location.href = 'index.html'; // Redirect to the index page
+    } else {
+        alert('Invalid username or password. Please try again.');
+    }
 }
+
+function filterProducts() {
+    const searchTerm = document.getElementById('search').value.toLowerCase();
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(product => {
+        const productText = product.innerText.toLowerCase();
+        if (productText.includes(searchTerm)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+function filterByCategory() {
+    const category = document.getElementById('category').value;
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+document.getElementById('category').addEventListener('change', filterByCategory);
