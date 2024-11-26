@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Checkout - KCKM Footwear</title>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - KCKM Footwear</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>KCKM Footwear</h1>
+        </div>
+    </header>
 
+    <section class="checkout-form">
+        <h2>Checkout</h2>
+        <form id="checkout-form" onsubmit="handleCheckout(event)">
+            <h3>Customer Info</h3>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+
+            <h3>Shipping Address</h3>
+            <label for="shipping-address">Shipping Address:</label>
+            <input type="text" id="shipping-address" required>
+
+            <h3>Billing Address</h3>
+            <label for="billing-address">Billing Address:</label>
+            <input type="text" id="billing-address" required>
+
+            <h3>Payment Information</h3>
+            <label for="cc-number">Credit Card Number:</label>
+            <input type="text" id="cc-number" required>
+
+            <label for="exp-date">Expiration Date:</label>
+            <input type="text" id="exp-date" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" required>
+
+            <h3>Total Price: $<span id="checkout-total-price">0</span></h3>
+            <button type="submit">Purchase Items</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 KCKM Footwear. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
