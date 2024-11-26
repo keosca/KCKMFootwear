@@ -102,6 +102,25 @@ header .cart-icon button:hover, header .login button:hover {
         background-color: #333;
         color: white;
     }
+    .modal-footer {
+        margin-top: 15px;
+    }
+    
+    .modal-footer .close-btn {
+        background-color: #f44336;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .modal-footer .close-btn:hover {
+        background-color: #d32f2f;
+    }
     .cart-items ul {
         list-style: none;
         padding: 0;
