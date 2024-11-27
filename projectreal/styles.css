@@ -96,6 +96,7 @@ header .cart-icon button, header .login button {
 
 header .cart-icon button:hover, header .login button:hover {
     background-color: #45a049;
+}
     footer {
         text-align: center;
         padding: 20px;
@@ -234,7 +235,6 @@ header .cart-icon button:hover, header .login button:hover {
         color: #333;
         font-size: 1.5rem;
     }
-}
 
 /* Login Modal */
 .login-modal {
