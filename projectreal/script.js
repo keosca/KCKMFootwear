@@ -5,7 +5,7 @@ let total = 0;
 function addToCart(productName, productPrice) {
     cart.push({ name: productName, price: productPrice });
     total += productPrice;
-    document.querySelector('.cart-icon button').innerText = Cart ($,{cart,length});
+    document.querySelector('.cart-icon button').innerText = `Cart (${cart.length})`;
     updateCartDetails();
 }
 
@@ -15,7 +15,7 @@ function updateCartDetails() {
     cartList.innerHTML = '';
     cart.forEach(item => {
         const li = document.createElement('li');
-        li.innerText = $;{item.name} - $$;{item.price.toFixed(2)};
+        li.innerText = `${item.name} - $${item.price.toFixed(2)}`;
         cartList.appendChild(li);
     });
     totalPrice.innerText = total.toFixed(2);
